@@ -1,16 +1,22 @@
 import speech_recognition as sr
 
-recognize = sr.Recognizer()
+def s2t():
 
-with sr.Microphone() as speech:
-    print("Start Teaching!")
+    recognize = sr.Recognizer()
 
-    audio = recognize.listen(speech)
+    with sr.Microphone() as speech:
+        print("Start Teaching!")
 
-try:
-    text = recognize.recognize_google(audio)
-    print(text)
-except sr.UnknownValueError:
-    print("Audio could not be understood")
-except sr.RequestError as error:
-    print("ERROR")
+        audio = recognize.listen(speech)
+
+    try:
+        text = recognize.recognize_google(audio)
+        print("test")
+        return(text)
+        
+    except sr.UnknownValueError:
+        # we need to show this on the screen
+        return("Audio could not be understood")
+    except sr.RequestError as error:
+        # could not request results from google speech (idk why)
+        print("ERROR")
