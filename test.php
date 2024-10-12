@@ -25,6 +25,7 @@ include_once 'sidebar.php';
             <?php
             }
             ?>
+            
         <script src="script.js" async defer></script>
     </body>
 </html>
