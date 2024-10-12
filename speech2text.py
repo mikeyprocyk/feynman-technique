@@ -11,7 +11,6 @@ def s2t():
 
     try:
         text = recognize.recognize_google(audio)
-        print("test")
         return(text)
         
     except sr.UnknownValueError:

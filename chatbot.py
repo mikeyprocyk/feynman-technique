@@ -14,7 +14,7 @@ response = chat.send_message(message)
 print("Chatbot: ", response.text)
 isAudio = True
 message = s2t()
-init_chat_microphone(message)
+
 def init_chat_text(message):
     while not isAudio:
         # inputting topic name
@@ -28,7 +28,10 @@ def init_chat_text(message):
 
 def init_chat_microphone(message):
     while isAudio:
+        print(message)
         #message = "The topic I will be explaining is: " + message + " and my explanation for it is: " + messageExplanation
         response = chat.send_message(message)
         print("Chatbot: ", response.text)
         break
+
+init_chat_microphone(message)
