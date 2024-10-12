@@ -7,60 +7,137 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* General styles */
+:root {
+    --lightgrey: #b1b1b1;
+    --white: #fffaf0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    background-color: #f4f4f4;
+    justify-content: center;
 }
 
-h3, h4 {
-    text-align: center;
+h3 {
+    color: var(--white);
+    font-weight: 200;
+    font-size: medium;
 }
 
-/* Main holder for options */
+h4 {
+    color: var(--white);
+}
+
+h6 {
+    color: var(--lightgrey);
+    font-weight: 200;
+}
+#small-text-top-left {
+    padding-top: 3%;
+    padding-left: 3%;
+    font-size: xx-small;
+}
+
+#left-section-text {
+    padding-left: 8%;
+    padding-top: 25%;
+    padding-bottom: 10%;
+}
+
 .options--holder--main {
-    display: flex; /* Use flexbox to align children */
-    width: 100%;
-    height: 300px; /* Set a fixed height for the section */
-    border-radius: 15px; /* Optional: rounded corners for the whole section */
-    overflow: hidden; /* Prevent children from overflowing */
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Two columns, with a 2:1 ratio */
+    grid-template-rows: 1fr 1fr; /* Two rows for the right side */
+    gap: 20px;
+    width: auto;
+    max-width: 1200px;
+    height: 60vh; /* Adjust this to control the height */
+    max-height: 800px; /* Optional: set a maximum height */
+    padding: 20px;
+    border-radius: 10px;
 }
 
-/* Left side voice option */
 .options--holder--voice--option {
-    background-color: #4CAF50; /* Green */
-    flex: 2; /* Take up 2 parts of the flexbox */
-    border-radius: 15px 0 0 15px; /* Round corners on the left */
-    display: flex;
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    color: white;
-    font-size: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    grid-row: 1 / 3;
+    background-image: url(https://media.istockphoto.com/id/1410455925/vector/dynamic-blue-particle-wave-abstract-sound-visualization-digital-structure-of-the-wave-flow.jpg?s=612x612&w=0&k=20&c=RL7do3aEvte0cKukjC30eHQ4nujXUIOa2TvQbIN8eKw=);
 }
 
-/* Right side options */
 .options--holder--text--option {
-    background-color: #2196F3; /* Blue */
-    flex: 1; /* Take up 1 part of the flexbox */
-    border-radius: 0 15px 0 0; /* Round top corners on the right */
-    margin-left: 10px; /* Gap between left and right */
-    display: flex;
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    color: white;
-    font-size: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
 }
 
-/* Custom input option */
 .options--holder--text--custom {
-    background-color: #FF9800; /* Orange */
-    flex: 1; /* Take up 1 part of the flexbox */
-    border-radius: 0 0 15px 0; /* Round bottom corners on the right */
-    margin-left: 10px; /* Gap between left and right */
-    margin-top: 10px; /* Gap between top and bottom */
-    display: flex;
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    color: white;
-    font-size: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
 }
+
+.btn-start-recording {
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-size: 14px;
+    font-weight: 600;
+    height: 36px;
+    justify-content: center;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 18px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform,opacity;
+    z-index: 0;
+  }
+  
+  .btn-start-recording:hover {
+    background: #F6F9FE;
+    color: #174ea6;
+  }
+  
+  .btn-start-recording:active {
+    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+    outline: none;
+  }
+  
+  .btn-start-recording:focus {
+    outline: none;
+    border: 2px solid #4285f4;
+  }
+  
+  .btn-start-recording:not(:disabled) {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+  }
+  
+  .btn-start-recording:not(:disabled):hover {
+    box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+  }
+  
+  .btn-start-recording:not(:disabled):focus {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+  }
+  
+  .btn-start-recording:not(:disabled):active {
+    box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+  }
+  
+  .btn-start-recording:disabled {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+  }

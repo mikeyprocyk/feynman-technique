@@ -10,19 +10,30 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h3>Hi {Username},</h3>
-        <h4>Let's see what I can do for you?</h4>
+        <div>
+            <h3>Hi {Username},</h3>
+            <h4>Let's see what I can do for you?</h4>
+        </div>
+        <br>
         <div class="options--holder--main">
             <div class="options--holder--voice--option">
-                <!-- If they want to utilize ai and use speech-->
+                <h6 id="small-text-top-left">Voice Helper</h6>
+                <i class="fa-regular fa-comments" style="color: #fdfcf7; font-size: 40px; padding-left: 10%; padding-top: 5%;"></i>
+                <h3 id="left-section-text">Let's learn something new using voice recording</h3>
+                <button class="btn-start-recording" role="button">Start Recording</button>
             </div>
             <div class="options--holder--text--option">
-                <!-- If they want to utilize ai and use text -->
+                <i class="fa-regular fa-message"></i>
+                <h5>Start New Chat</h5>
+                <i class="fa-regular fa-circle-right"></i>
             </div>
             <div class="options--holder--text--custom">
-                <!--If they want to customly input the definitions and terms -->
+                <i class="fa-regular fa-pen-to-square"></i>
+                <h5>Set your definitions</h5>
+                <i class="fa-regular fa-circle-right"></i>
             </div>
         </div>
+        <script src="https://kit.fontawesome.com/4820a3ee18.js" crossorigin="anonymous"></script>
         <script src="script.js" async defer></script>
     </body>
 </html>
