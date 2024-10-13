@@ -5,6 +5,7 @@ body {
     height: 100vh;
     background-color: black;
     margin: 0;
+    perspective: 1000px; /* Add perspective */
 }
 
 #sphere {
@@ -14,4 +15,19 @@ body {
     background-color: rgba(255, 0, 0, 0.7);
     transition: transform 0.1s ease, background-color 0.1s ease;
     will-change: transform, background-color;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Add shadow */
+    position: relative; /* Position for child elements */
+}
+
+/* Optional: Add a pseudo-element for 3D effect */
+#sphere::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 30%, transparent 70%);
+    transform: translateZ(-10px); /* Create a slight depth effect */
 }
