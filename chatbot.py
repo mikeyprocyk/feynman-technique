@@ -17,12 +17,12 @@ isAudio = True
 message = s2t()
 
 
-def init_chat_text(message):
+def init_chat_text(message, messageExplanation):
     while not isAudio:
         # inputting topic name
-        message = input("You: ")
+        #message = input("You: ")
         # inputting explanation name
-        messageExplanation = input("You: ")
+        #messageExplanation = input("You: ")
         message = "The topic I will be explaining is: " + message + " and my explanation for it is: " + messageExplanation
         response = chat.send_message(message)
         print("Chatbot: ", response.text)
