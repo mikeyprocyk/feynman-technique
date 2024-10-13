@@ -33,6 +33,14 @@ h6 {
     color: var(--lightgrey);
     font-weight: 200;
 }
+
+.top-div h4{
+    font-size: medium;
+    font-weight: 200;
+    color: var(--white);
+    padding-left: 5%;
+}
+
 #small-text-top-left {
     padding-top: 3%;
     padding-left: 3%;
