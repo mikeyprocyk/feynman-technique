@@ -28,6 +28,10 @@
                 echo "<p>Incorrect login information.</p>";
                 echo '<a href="signup.php"><p style="cursor: pointer;">Dont have an account? Click here</p></a>';
             }
+        }
+        else{
+            echo '<a href="signup.php"><p style="cursor: pointer;">Dont have an account? Click here</p></a>';
+        }
     ?>
     </section>
 </body>
