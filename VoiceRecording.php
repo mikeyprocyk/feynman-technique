@@ -18,6 +18,13 @@
     </section>
     <div class="ai-text-section">
 
+        <?php 
+        $command = escapeshellcmd('python3 chatbot.py');
+        $output = shell_exec($command);
+
+        echo"<p>".htmlspecialchars($output). "</p>";
+        ?>
+
     </div>
     <script src="VoiceR.js"></script>
     <script>
