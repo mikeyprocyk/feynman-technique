@@ -10,7 +10,6 @@
 </head>
 <body>
     <section class="chat-form">
-    <i class="fa-regular fa-circle-left" style="color: white; font-size: 25px; cursor: pointer; padding-right: 15px; padding-top: 5px;" onclick="goBack()"></i>
         <h2>Start Chatting With Study Buddy AI</h2>
         <form id="textForm">
             <input type="text" id="input1" placeholder="Topic" required>
@@ -26,10 +25,6 @@
     </section>
 
     <script src="chat.js" async defer></script>
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
+
 </body>
 </html>

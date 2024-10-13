@@ -89,21 +89,3 @@ body {
     padding: 20px;
     text-align: center;
 }
-.back-button {
-    cursor: pointer;
-    background-color: var(--white);
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    border-radius: 10px;
-    margin-top: 300px; /* Space above the button */
-    outline: solid 1px var(--white);
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.back-button:hover {
-    background-color: var(--lightgrey);
-    color: var(--white);
-}
