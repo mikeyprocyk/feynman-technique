@@ -22,7 +22,7 @@
         $command = escapeshellcmd('python3 chatbot.py');
         $output = shell_exec($command);
 
-        echo"<p>".htmlspecialchars($output). "</p>";
+        echo "<p>" . htmlspecialchars($output) . "</p>";
         ?>
 
     </div>
