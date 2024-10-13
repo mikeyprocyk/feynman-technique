@@ -1,4 +1,4 @@
-#Location of chatbot
+#!/usr/bin/python3
 import google.generativeai as ai
 from speech2text import s2t
 from text2speech import t2s
