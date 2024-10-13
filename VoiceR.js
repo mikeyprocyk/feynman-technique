@@ -20,7 +20,8 @@ function visualize() {
     analyser.getByteFrequencyData(dataArray);
 
     const average = dataArray.reduce((sum, value) => sum + value, 0) / dataArray.length;
-    const scale = Math.max(1, average / 50);
+    const scalingFactor = 2;
+    const scale = Math.max(1, (average * scalingFactor) / 50);
     sphere.style.transform = `scale(${scale}) rotateY(${Math.sin(Date.now() / 500) * 10}deg)`;
 
     const red = Math.min(255, Math.max(0, Math.floor((average / 255) * 255)));
