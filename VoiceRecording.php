@@ -10,11 +10,21 @@
 <body>
     <section class="main-container">
         <div style="display: flex;">
-        <i class="fa-regular fa-circle-left" style="color: white; font-size: 25px; cursor: pointer; padding-right: 15px; padding-top: 5px;" onclick="goBack()"></i>
+            <i class="fa-regular fa-circle-left" style="color: white; font-size: 25px; cursor: pointer; padding-right: 15px; padding-top: 5px;" onclick="goBack()"></i>
             <h2>Speaking to AI Bot</h2>
         </div>
         <div id="sphere"></div>
     </section>
+    <div class="ai-text-section">
+        <?php
+        // Execute the Python script to capture microphone input and interact with the chatbot
+        $command = escapeshellcmd("python3 chatbot.py");
+        $output = shell_exec($command);  // Captures the chatbot's response
+
+        // Display the chatbot's response
+        echo "<p>" . htmlspecialchars($output) . "</p>";
+        ?>
+    </div>
     <script src="VoiceR.js"></script>
     <script>
         function goBack() {
