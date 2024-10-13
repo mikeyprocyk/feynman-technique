@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studdy Buddy</title>
+    <title>Study Buddy</title>
     <link rel="stylesheet" href="VRecording.css">
     <script src="https://kit.fontawesome.com/4820a3ee18.js" crossorigin="anonymous"></script>
 </head>
@@ -18,7 +18,7 @@
     <div class="ai-text-section">
         <?php
         // Execute the Python script to capture microphone input and interact with the chatbot
-        $command = escapeshellcmd("python3 chatbot.py");
+        $command = escapeshellcmd("python3 chatbot.py microphone"); // Make sure the mode is 'microphone'
         $output = shell_exec($command);  // Captures the chatbot's response
 
         // Display the chatbot's response
