@@ -1,4 +1,7 @@
-<!-- Location of HTML -->
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,7 +14,15 @@
     </head>
     <body>
         <div class="top-div">
-            <h3 style="padding-top: 10%; font-size: 12px; padding-left: 5%; color: var(--lightgrey);">Hi {Username},</h3>
+        <h3 style="padding-top: 10%; font-size: 12px; padding-left: 5%; color: var(--lightgrey);">
+            <?php
+            if (isset($_SESSION["useruid"])) {
+                echo "Hi " . $_SESSION["useruid"] . ","; // Correct concatenation
+            } else {
+                echo "You need to be signed in to use.";
+            }
+            ?>
+        </h3>
             <h4>Let's see what I can do for you?</h4>
         </div>
         <div class="options--holder--main">
