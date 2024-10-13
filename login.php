@@ -15,7 +15,6 @@
             <input type="text" name="uid" placeholder="Username/Email...">
             <input type="password" name="pwd" placeholder="Password...">
             <button type="submit" name="submit">Log In</button>
-            
         </form>
         <?php
         if (isset($_GET["error"])) {
@@ -29,6 +28,9 @@
                 echo "<p>Incorrect login information.</p>";
                 echo '<a href="signup.php"><p style="cursor: pointer;">Dont have an account? Click here</p></a>';
             }
+        }
+        else{
+            echo '<a href="signup.php"><p style="cursor: pointer;">Dont have an account? Click here</p></a>';
         }
     ?>
     </section>

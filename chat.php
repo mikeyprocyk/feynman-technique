@@ -40,5 +40,6 @@
     </section>
 
     <script src="chat.js" async defer></script>
+
 </body>
 </html>
