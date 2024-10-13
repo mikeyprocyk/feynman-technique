@@ -32,7 +32,7 @@
                 <h3 id="left-section-text">Let's learn something new using voice recording</h3>
                 <?php 
                 if (isset($_SESSION["useruid"])) {
-                    echo '<a href="voicerecording.php"><button class="btn-start-recording" role="button">Start Recording</button></a>';
+                    echo '<a href="VoiceRecording.php"><button class="btn-start-recording" role="button">Start Recording</button></a>';
                 } else {
                     echo '<a href="login.php"><button class="btn-start-recording" role="button">Start Recording</button></a>';
                 } 
