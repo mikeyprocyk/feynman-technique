@@ -21,7 +21,7 @@ function visualize() {
 
     const average = dataArray.reduce((sum, value) => sum + value, 0) / dataArray.length;
     const scale = Math.max(1, average / 50);
-    sphere.style.transform = `scale(${scale}) rotateY(${Math.sin(Date.now() / 500) * 10}deg)`; // Add rotation
+    sphere.style.transform = `scale(${scale}) rotateY(${Math.sin(Date.now() / 500) * 10}deg)`;
 
     const red = Math.min(255, Math.max(0, Math.floor((average / 255) * 255)));
     const green = 0;
@@ -31,5 +31,5 @@ function visualize() {
 
     const pulsate = 0.1;
     const newScale = scale + Math.sin(Date.now() / 500) * pulsate;
-    sphere.style.transform = `scale(${Math.max(1, newScale)}) rotateY(${Math.sin(Date.now() / 500) * 10}deg)`; // Add rotation to pulsating
+    sphere.style.transform = `scale(${Math.max(1, newScale)}) rotateY(${Math.sin(Date.now() / 500) * 10}deg)`;
 }
