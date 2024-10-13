@@ -42,7 +42,7 @@
                 echo '<a href="login.php"><p style="cursor: pointer;">Already have an account? Click here</p></a>';
             } else if ($_GET["error"] == "none") {
                 echo "<p>You have successfully signed up!</p>";
-                header("location: ../feynman-technique/login.php");
+                header("location: ../login.php");
                 exit();
             }
         }
