@@ -6,7 +6,7 @@
     <title>Study Buddy</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="chat.css">
 </head>
 <body>
     <h2>Start Chatting With Studdy Buddy AI</h2>
@@ -24,6 +24,6 @@
         This is a box!
     </div>
 
-    <script src="custom.js" async defer></script>
+    <script src="chat.js" async defer></script>
 </body>
 </html>
