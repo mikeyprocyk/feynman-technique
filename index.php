@@ -54,7 +54,7 @@
                 <h5 style="padding-left: 15%; padding-top: 10%;">Set your definitions</h5>
                 <?php 
                 if (isset($_SESSION["useruid"])) {
-                    echo '<a href="#"><i class="fa-regular fa-circle-right" style="color: #fdfcf7; font-size: 25px; padding-left: 80%; padding-top: 10%;"></i></a>';
+                    echo '<a href="definitions.php"><i class="fa-regular fa-circle-right" style="color: #fdfcf7; font-size: 25px; padding-left: 80%; padding-top: 10%;"></i></a>';
                 } else {
                     echo '<a href="login.php"><i class="fa-regular fa-circle-right" style="color: #fdfcf7; font-size: 25px; padding-left: 80%; padding-top: 10%;"></i></a>';
                 } 
