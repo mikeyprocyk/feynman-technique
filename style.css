@@ -10,10 +10,12 @@
 :root {
     --lightgrey: #b1b1b1;
     --white: #fffaf0;
+    --darkgrey: rgba(37,40,49,255)
 }
 
 body {
-    background-color: #f4f4f4;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,1,1,1) 100%);
     justify-content: center;
 }
 
@@ -40,7 +42,7 @@ h6 {
 #left-section-text {
     padding-left: 8%;
     padding-top: 25%;
-    padding-bottom: 10%;
+    padding-bottom: 15%;
 }
 
 .options--holder--main {
@@ -51,28 +53,45 @@ h6 {
     width: auto;
     max-width: 1200px;
     height: 60vh; /* Adjust this to control the height */
-    max-height: 800px; /* Optional: set a maximum height */
+    max-height: 350px;
     padding: 20px;
     border-radius: 10px;
 }
 
 .options--holder--voice--option {
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    outline: solid 1px var(--white);
     grid-row: 1 / 3;
     background-image: url(https://media.istockphoto.com/id/1410455925/vector/dynamic-blue-particle-wave-abstract-sound-visualization-digital-structure-of-the-wave-flow.jpg?s=612x612&w=0&k=20&c=RL7do3aEvte0cKukjC30eHQ4nujXUIOa2TvQbIN8eKw=);
 }
 
 .options--holder--text--option {
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
     height: 100%;
+    outline: solid 1px var(--white);
+    background-color: var(--darkgrey);
+}
+
+.options--holder--text--option h5 {
+    color: var(--white);
+    font-weight: 300;
+    font-size: 2.5vh;
 }
 
 .options--holder--text--custom {
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    background-color: var(--darkgrey);
+    outline: solid 1px var(--white);
     height: 100%;
+}
+
+.options--holder--text--custom h5 {
+    color: var(--white);
+    font-weight: 300;
+    font-size: 2.5vh;
 }
 
 .btn-start-recording {
@@ -95,6 +114,7 @@ h6 {
     max-width: 100%;
     overflow: visible;
     padding: 2px 18px;
+    margin-left: 10%;
     position: relative;
     text-align: center;
     text-transform: none;
@@ -105,39 +125,4 @@ h6 {
     width: auto;
     will-change: transform,opacity;
     z-index: 0;
-  }
-  
-  .btn-start-recording:hover {
-    background: #F6F9FE;
-    color: #174ea6;
-  }
-  
-  .btn-start-recording:active {
-    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
-    outline: none;
-  }
-  
-  .btn-start-recording:focus {
-    outline: none;
-    border: 2px solid #4285f4;
-  }
-  
-  .btn-start-recording:not(:disabled) {
-    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-  }
-  
-  .btn-start-recording:not(:disabled):hover {
-    box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
-  }
-  
-  .btn-start-recording:not(:disabled):focus {
-    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-  }
-  
-  .btn-start-recording:not(:disabled):active {
-    box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
-  }
-  
-  .btn-start-recording:disabled {
-    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
   }
