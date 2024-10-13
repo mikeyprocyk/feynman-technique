@@ -17,7 +17,7 @@
         <h3 style="padding-top: 10%; font-size: 12px; padding-left: 5%; color: var(--lightgrey);">
             <?php
             if (isset($_SESSION["useruid"])) {
-                echo "Hi " . $_SESSION["useruid"] . ","; // Correct concatenation
+                echo "Hi " . $_SESSION["useruid"] . ",";
             } else {
                 echo "You need to be signed in to use.";
             }
@@ -30,12 +30,24 @@
                 <h6 id="small-text-top-left">Voice Helper</h6>
                 <i class="fa-regular fa-comments" style="color: #fdfcf7; font-size: 38px; padding-left: 10%; padding-top: 10%;"></i>
                 <h3 id="left-section-text">Let's learn something new using voice recording</h3>
-                <button class="btn-start-recording" role="button">Start Recording</button>
+                <?php 
+                if (isset($_SESSION["useruid"])) {
+                    echo '<a href="voiceRecording.php"><button class="btn-start-recording" role="button">Start Recording</button></a>';
+                } else {
+                    echo '<a href="login.php"><button class="btn-start-recording" role="button">Start Recording</button></a>';
+                } 
+                ?>
             </div>
             <div class="options--holder--text--option">
                 <i class="fa-regular fa-message" style="color: #fdfcf7; font-size: 20px; padding-left: 5%; padding-top: 5%;"></i>
                 <h5 style="padding-left: 15%; padding-top: 10%;">Start New Chat</h5>
-                <a href="signup.php"><i class="fa-regular fa-circle-right" style="color: #fdfcf7; font-size: 25px; padding-left: 80%; padding-top: 25%;"></i></a>
+                <?php 
+                if (isset($_SESSION["useruid"])) {
+                    echo '<a href="chat.php"><i class="fa-regular fa-circle-right" style="color: #fdfcf7; font-size: 25px; padding-left: 80%; padding-top: 25%;"></i></a>';
+                } else {
+                    echo '<a href="login.php"><i class="fa-regular fa-circle-right" style="color: #fdfcf7; font-size: 25px; padding-left: 80%; padding-top: 25%;"></i></a>';
+                } 
+                ?>
             </div>
             <div class="options--holder--text--custom">
                 <i class="fa-regular fa-pen-to-square" style="color: #fdfcf7; font-size: 20px; padding-left: 5%; padding-top: 5%;"></i>
