@@ -24,7 +24,7 @@
             <div class="options--holder--text--option">
                 <i class="fa-regular fa-message" style="color: #fdfcf7; font-size: 20px; padding-left: 5%; padding-top: 5%;"></i>
                 <h5 style="padding-left: 15%; padding-top: 10%;">Start New Chat</h5>
-                <a href="#"><i class="fa-regular fa-circle-right" style="color: #fdfcf7; font-size: 25px; padding-left: 80%; padding-top: 25%;"></i></a>
+                <a href="signup.php"><i class="fa-regular fa-circle-right" style="color: #fdfcf7; font-size: 25px; padding-left: 80%; padding-top: 25%;"></i></a>
             </div>
             <div class="options--holder--text--custom">
                 <i class="fa-regular fa-pen-to-square" style="color: #fdfcf7; font-size: 20px; padding-left: 5%; padding-top: 5%;"></i>
