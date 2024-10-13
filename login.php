@@ -27,8 +27,6 @@
             } else if ($_GET["error"] == "wronglogin") {
                 echo "<p>Incorrect login information.</p>";
                 echo '<a href="signup.php"><p style="cursor: pointer;">Dont have an account? Click here</p></a>';
-                header(header: "location:../signup.php");
-                exit();
             }
     ?>
     </section>
