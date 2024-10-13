@@ -52,7 +52,13 @@
             <div class="options--holder--text--custom">
                 <i class="fa-regular fa-pen-to-square" style="color: #fdfcf7; font-size: 20px; padding-left: 5%; padding-top: 5%;"></i>
                 <h5 style="padding-left: 15%; padding-top: 10%;">Set your definitions</h5>
-                <a href="#"><i class="fa-regular fa-circle-right" style="color: #fdfcf7; font-size: 25px; padding-left: 80%; padding-top: 10%;"></i></a>
+                <?php 
+                if (isset($_SESSION["useruid"])) {
+                    echo '<a href="#"><i class="fa-regular fa-circle-right" style="color: #fdfcf7; font-size: 25px; padding-left: 80%; padding-top: 10%;"></i></a>';
+                } else {
+                    echo '<a href="login.php"><i class="fa-regular fa-circle-right" style="color: #fdfcf7; font-size: 25px; padding-left: 80%; padding-top: 10%;"></i></a>';
+                } 
+                ?>
             </div>
         </div>
         <script src="https://kit.fontawesome.com/4820a3ee18.js" crossorigin="anonymous"></script>
