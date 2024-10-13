@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audio Input Sphere Visualizer</title>
+    <title>Studdy Buddy</title>
     <link rel="stylesheet" href="VRecording.css">
+    <script src="https://kit.fontawesome.com/4820a3ee18.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="sphere"></div>
+    <section class="main-container">
+        <div style="display: flex;">
+        <i class="fa-regular fa-circle-left" style="color: white; font-size: 25px; cursor: pointer; padding-right: 15px; padding-top: 5px;" onclick="goBack()"></i>
+            <h2>Speaking to AI Bot</h2>
+        </div>
+        <div id="sphere"></div>
+    </section>
     <script src="VoiceR.js"></script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 </html>
